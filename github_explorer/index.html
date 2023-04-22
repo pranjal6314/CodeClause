@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="github.png" />
+    <title>GitPilot</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .profile {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .profile img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+      .profile h2 {
+        margin: 0;
+      }
+      .repo-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .repo {
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .repo h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+      .repo p {
+        margin: 0;
+        font-size: 14px;
+        color: #666;
+      }
+      .repo .button {
+        display: block;
+        margin-top: 10px;
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+      .repo .button:hover {
+        background-color: #0062cc;
+      }
+      input[type="text"] {
+        padding: 10px;
+        width: 50%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0px 2px 2px #ddd;
+      }
+      input[type="submit"] {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #downloadBtn {
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-top: 15px;
+        color: #fff;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        text-decoration: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      #downloadBtn:hover {
+        background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>GitHub User Profile -<i>by Pranjal Choudhary</i></h1>
+      <form>
+        <!-- <label for="username">Enter a GitHub username:</label>
+        <input type="text" id="username" name="username" required />
+        <button type="submit">Submit</button> -->
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Enter Github username"
+        />
+        <input type="submit" value="Submit" />
+      </form>
+      <div id="print">
+        <div id="profile"></div>
+        <div id="repos"></div>
+      </div>
+      <button id="downloadBtn">download</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script src="script.js
+    "></script>
+  </body>
+</html>

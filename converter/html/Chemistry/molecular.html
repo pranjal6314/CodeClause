@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+
+  <head>
+    <title>Molecular Weight Calculator</title>
+    <link rel="icon" href="../../image/calculator_icon.png">
+    <link rel="stylesheet" href="../../style/index.css">
+    <!-- bootstrap --><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   <!--Font awesomq-->
+  
+  <!--Meta tags-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+  
+  <meta name="title" content="conversion calculator">
+  <meta name="description" content="convert units dynamically">
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="2 days">
+  <meta name="author" content="pranjal choudhary">
+    
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+      form {
+        margin: 50px auto;
+        max-width: 500px;
+        text-align: center;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input[type="text"] {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 100%;
+        max-width: 400px;
+        box-sizing: border-box;
+      }
+      button[type="submit"] {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      button[type="submit"]:hover {
+        background-color: #0062cc;
+      }
+      #result {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Molecular Weight Calculator</h1>
+    <form>
+      <label for="formula">Chemical Formula:</label>
+      <input type="text" id="formula" placeholder="write in uppercase - H2O">
+      <button type="submit">Calculate</button>
+     
+    </form>
+
+    
+    <div id="result"><button type="submit"><a href="../../index.html" style="text-decoration: none; color:black" >Home</a> </button></div>
+    
+    <!-- include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- include calculator script -->
+    <script src="../../js/chemistry/molecular.js"></script>
+  </body>
+</html>

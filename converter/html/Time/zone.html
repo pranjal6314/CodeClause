@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Time Zone Converter</title>
+	<style>
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		input {
+			padding: 5px;
+			margin-bottom: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			width: 200px;
+			box-sizing: border-box;
+		}
+		select {
+			padding: 5px;
+			margin-bottom: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			width: 200px;
+			box-sizing: border-box;
+		}
+		button {
+			padding: 10px;
+			background-color: #4CAF50;
+			color: white;
+			border-radius: 5px;
+			border: none;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1>Time Zone Converter</h1>
+	<form>
+		<label>Enter a date and time:</label>
+		<input type="datetime-local" id="datetime">
+
+		<label>Select a time zone:</label>
+		<select id="timezone">
+			<option value="UTC-12">UTC-12</option>
+			<option value="UTC-11">UTC-11</option>
+			<option value="UTC-10">UTC-10</option>
+			<option value="UTC-9">UTC-9</option>
+			<option value="UTC-8">UTC-8</option>
+			<option value="UTC-7">UTC-7</option>
+			<option value="UTC-6">UTC-6</option>
+			<option value="UTC-5">UTC-5</option>
+			<option value="UTC-4">UTC-4</option>
+			<option value="UTC-3">UTC-3</option>
+			<option value="UTC-2">UTC-2</option>
+			<option value="UTC-1">UTC-1</option>
+			<option value="UTC+0">UTC+0</option>
+			<option value="UTC+1">UTC+1</option>
+			<option value="UTC+2">UTC+2</option>
+			<option value="UTC+3">UTC+3</option>
+			<option value="UTC+4">UTC+4</option>
+			<option value="UTC+5">UTC+5</option>
+			<option value="UTC+6">UTC+6</option>
+			<option value="UTC+7">UTC+7</option>
+			<option value="UTC+8">UTC+8</option>
+			<option value="UTC+9">UTC+9</option>
+			<option value="UTC+10">UTC+10</option>
+			<option value="UTC+11">UTC+11</option>
+			<option value="UTC+12">UTC+12</option>
+		</select>
+
+		<button type="button" onclick="convert()">Convert</button>
+	</form>
+    <div id="result"><button type="submit"><a href="../../index.html" style="text-decoration: none; color:black" >Home</a> </button></div>
+
+	<h2>Converted time:</h2>
+	<p id="converted"></p>
+
+	<script>
+		function convert() {
+			// Get the input date and time
+			let datetime = new Date(document.getElementById("datetime").value);
+
+			// Get the selected time zone
+			let timezone = document.getElementById("timezone").value;
+
+			// Convert the input time to the selected time zone
+			let offset = parseInt(timezone.substring(3)); // get the
+// Calculate the offset in milliseconds
+let offsetMs = offset * 60 * 60 * 1000;
+		// Create a new date object with the converted time
+		let convertedTime = new Date(datetime.getTime() + offsetMs);
+
+		// Format the converted time
+		let options = {
+			weekday: 'long',
+			year: 'numeric',
+			month: 'long',
+			day: 'numeric',
+			hour: 'numeric',
+			minute: 'numeric',
+			second: 'numeric',
+			timeZoneName: 'short'
+		};
+		let formattedTime = convertedTime.toLocaleString('en-US', options);
+
+		// Display the converted time
+		document.getElementById("converted").innerHTML = formattedTime;
+	}
+</script>
+</body>
+</html>

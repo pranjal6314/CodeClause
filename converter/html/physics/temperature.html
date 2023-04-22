@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<title>Unit Converter - Temperature</title>
+<head>
+  <link rel="icon" href="../../image/calculator_icon.png">
+  <link rel="stylesheet" href="../../style/index.css">
+  <!-- bootstrap --><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   <!--Font awesomq-->
+
+
+<!--Meta tags-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+<meta name="title" content="conversion calculator">
+<meta name="description" content="convert units dynamically">
+
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta name="revisit-after" content="2 days">
+<meta name="author" content="Pranjal Choudhary">
+
+
+<!--Meta tags above-->
+
+</head>
+<body>
+  <h2 class="text-center text-white bg-info text-uppercase header-text"> <a href="#" class="text-light">QuickConvert</a> <i class="fa fa-calculator"></i></h2>
+ 
+    <p class="about-para">
+      <h3 class="text-center">Get quick unit conversions - just type a value into any input field - <i> <b>by pranjal choudhary</b> </i></h3>
+    </p>
+  <div class="container jumbotron">
+  <div class="container-fluid">
+    
+      
+    <!--menu digital-->
+    <div class="row">
+      <div class="dropdown-container text-center">
+      <div class="dropdown">
+          <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Digital 
+          </a>
+        
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            
+            
+            
+            <a class="dropdown-item" href="../digital/number-conversion.html">Number</a>
+            <a class="dropdown-item" href="../digital/digital-storage.html">Digital Storage</a>
+          </div>
+        </div>
+        </div>
+      
+
+<!--menu-physics-->
+        <div class="dropdown-container text-center">
+          <div class="dropdown">
+              <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Physics 
+              </a>
+            
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="length.html">Length</a>
+                <a class="dropdown-item" href="area.html">Area</a>
+                <a class="dropdown-item" href="speed.html">Speed</a>
+                <a class="dropdown-item" href="../../index.html">Weight</a>
+              </div>
+            </div>
+            </div>
+
+        
+            
+
+
+               
+
+
+                    <div class="dropdown-container text-center">
+                      <div class="dropdown">
+                          <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Geometry 
+                          </a>
+                        
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <!--Maths item-->
+                            <a class="dropdown-item" href="../geometry/circle.html">Circle</a>
+                            <a class="dropdown-item" href="../geometry/square.html">Square</a>
+                            <a class="dropdown-item" href="../geometry/rectangle.html">Rectangle</a>
+                          </div>
+                        </div>
+                        </div>
+
+                        <div class="dropdown-container text-center">
+                          <div class="dropdown">
+                            <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Chemistry 
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                              <a class="dropdown-item" href="../Chemistry/molecular.html">Molecular Weight Calculator</a>
+                              <a class="dropdown-item" href="../Chemistry/equation.html">Chemical Equation Balancer</a>
+                              <a class="dropdown-item" href="../Chemistry/periodic.html">Periodic Table</a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- menu Time -->
+                        <div class="dropdown-container text-center">
+                          <div class="dropdown">
+                            <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Time 
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                              <a class="dropdown-item" href="../Time/zone.html">Time Zone Converter</a>
+                              <a class="dropdown-item" href="../Time/duration.html">Time Duration Calculator</a>
+                              <a class="dropdown-item" href="../Time/date.html">Date Calculator</a>
+                            </div>
+                          </div>
+                        </div>
+
+          </div>
+
+      
+        <div class="text-center">
+
+  <label>Fahrenheit</label><br>
+  <input id="fahrenheit" class="form-control text-center mb-2  mr-sm-2" type="number" placeholder="Fahrenheit"
+  onchange="fromFahrenheitToOther(this.value)" oninput="fromFahrenheitToOther(this.value)">
+        
+
+<label>Celsius</label><br>
+<input id= "celsius" class="form-control text-center  mb-2 mr-sm-2" type="number" placeholder="Celsius"
+onchange="fromCelsiusToOthers(this.value)" oninput = "fromCelsiusToOthers(this.value)"><br>
+
+
+
+  <label>kelvin</label><br>
+<input id= "kelvin" class="form-control text-center  mb-2 mr-sm-2" type="number" placeholder="Kelvin"
+onchange="fromKelvinToOther(this.value)" oninput = "fromKelvinToOther(this.value)">
+
+</div>
+
+
+</div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src = "../../js/physics/temperature-conversion.js"></script>
+</body>
+<footer class="bg-grey">
+  <div class="container-fluid text-center pt-1">
+    <button  class="btn peach-gradient"><a style="text-decoration: none;color: black;" href="https://www.github.com/pranjal6314" target="_blank"><b>GitHub</b></a></button>
+
+  </div>
+  
+  
+      <p class="pt-2 text-center"><a style="text-decoration: none;color: black;" href="https://www.github.com/pranjal6314" class="text-black"><b> Pranjal Choudhary &#169; 2023</b>
+      </a></p>
+
+</footer>
+</html>

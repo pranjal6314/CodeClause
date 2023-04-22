@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date Calculator</title>
+	<style>
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		input {
+			padding: 5px;
+			margin-bottom: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			width: 200px;
+			box-sizing: border-box;
+		}
+       
+		select {
+			padding: 5px;
+			margin-bottom: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			width: 200px;
+			box-sizing: border-box;
+		}
+		button {
+			padding: 10px;
+			background-color: #4CAF50;
+			color: white;
+			border-radius: 5px;
+			border: none;
+			cursor: pointer;
+		}
+        
+	</style>
+</head>
+<body>
+	<h1>Date Calculator</h1>
+	
+	
+	<form>
+		<label>Enter the first date:</label>
+		<input type="date" id="date1">
+        <label>Enter the second date:</label>
+        <input type="date" id="date2">
+    
+        <button type="button" onclick="calculate()">Calculate</button>
+    </form>
+    <div id="result"><button type="submit"><a href="../../index.html" style="text-decoration: none; color:black" >Home</a> </button></div>
+    <h2>Calculated values:</h2>
+    <p>Number of days between the two dates: <span id="days"></span></p>
+    <p>Number of weeks between the two dates: <span id="weeks"></span></p>
+    <p>Number of months between the two dates: <span id="months"></span></p>
+    
+    <script>
+        function calculate() {
+            // Get the input dates
+            let date1 = new Date(document.getElementById("date1").value);
+            let date2 = new Date(document.getElementById("date2").value);
+    
+            // Calculate the number of days between the two dates
+            let oneDay = 24 * 60 * 60 * 1000; // hours * minutes * seconds * milliseconds
+            let diffDays = Math.round(Math.abs((date1 - date2) / oneDay));
+    
+            // Calculate the number of weeks between the two dates
+            let diffWeeks = Math.floor(diffDays / 7);
+    
+            // Calculate the number of months between the two dates
+            let diffMonths = (date2.getFullYear() - date1.getFullYear()) * 12 + (date2.getMonth() - date1.getMonth());
+    
+            // Display the calculated values
+            document.getElementById("days").textContent = diffDays;
+            document.getElementById("weeks").textContent = diffWeeks;
+            document.getElementById("months").textContent = diffMonths;
+        }
+    </script>
+</body>
+</html>    

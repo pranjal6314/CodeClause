@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Time Duration Calculator</title>
+	<style>
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		input {
+			padding: 5px;
+			margin-bottom: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			width: 200px;
+			box-sizing: border-box;
+		}
+		button {
+			padding: 10px;
+			background-color: #4CAF50;
+			color: white;
+			border-radius: 5px;
+			border: none;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1>Time Duration Calculator</h1>
+	<form>
+		<label>Enter a start date and time:</label>
+		<input type="datetime-local" id="start">
+
+		<label>Enter an end date and time:</label>
+		<input type="datetime-local" id="end">
+
+		<button type="button" onclick="calculate()">Calculate Duration</button>
+	</form>
+    <div id="result"><button type="submit"><a href="../../index.html" style="text-decoration: none; color:black" >Home</a> </button></div>
+
+	<h2>Time Duration:</h2>
+	<p id="duration"></p>
+
+	<script>
+		function calculate() {
+			// Get the start and end date and time
+			let start = new Date(document.getElementById("start").value);
+			let end = new Date(document.getElementById("end").value);
+
+			// Calculate the duration in seconds
+			let duration = Math.abs(end - start) / 1000;
+
+			// Convert the duration to hours, minutes, and seconds
+			let hours = Math.floor(duration / 3600);
+			let minutes = Math.floor((duration % 3600) / 60);
+			let seconds = Math.floor(duration % 60);
+
+			// Format the duration as a string
+			let durationString = hours + " hours, " + minutes + " minutes, " + seconds + " seconds";
+
+			// Display the duration
+			document.getElementById("duration").innerHTML = durationString;
+		}
+	</script>
+</body>
+</html>
